@@ -99,7 +99,7 @@ function getRandomCharacter(array) {
 function generatePassword(){
 var isValid = false;
 var passwordLength = prompt("How long do you want your password to be?");
-do{
+while(!isValid){
   var passwordNum = parseInt(passwordLength)
   if(passwordNum >= 8 && passwordNum <= 128 )
   {
@@ -107,7 +107,7 @@ do{
   }else{
     passwordLength = prompt("Please enter a number between 8-128");
   }
-}while(!isValid)
+}
 var hasSpecialChars = confirm('Do you want special characters?');
 var hasUpperCase = confirm('Do you want uppercase letters?');
 var hasLowerCase = confirm('Do you want lowercase letters?');
